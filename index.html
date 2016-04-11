@@ -1,0 +1,29 @@
+<html ng-app = 'routing'>
+<link rel="stylesheet" href="style.css"></link>
+	<body>
+		<div class="menu">
+		        <ul>
+		            <li><a ui-sref="home">Home</a></li>
+		            <li>
+		                Products
+		                <ul>
+		                    <li><a ui-sref="products({id: 'shoes'})">Shoes</a></li>
+		                    <li><a ui-sref="products({id: 'socks'})">Socks</a></li>
+		                </ul>
+		            </li>
+		            <li><a ui-sref="settings"> Settings </a></li>
+		        </ul>
+		    </div>
+
+    <div class="view-container">
+        <div ui-view></div>
+    </div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.ui-router/1.0.0-alpha0/angular-ui-router.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/products/productsCtrl.js"></script>
+		<script src="app/products/productsService.js"></script>
+
+	</body>
+</html>
